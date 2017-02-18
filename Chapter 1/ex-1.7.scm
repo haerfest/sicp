@@ -11,7 +11,7 @@
 ; square root of numbers smaller than 0.001.
 ;
 ; For example, the square root of 0.0001 is 0.01, yet:
-;   > (square-root 0.0001)
+;   > (sqrt 0.0001)
 ;   0.03230844833048122
 ;
 ; It doesn't work for finding the square root of very
@@ -20,7 +20,7 @@
 ;
 ; The guess^2 will result in a very large negative number,
 ; yet the |guess^2 - x| will turn this in a very large
-; positive number. This number will always fail the < 0.001
+; positive number. This number will *always* fail the < 0.001
 ; test, and the procedure will never terminate.
 ;
 ; For example, the square root of 1e50 is 1e25, yet it hits
