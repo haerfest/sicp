@@ -1,4 +1,3 @@
-
 ; When n even:
 ; (iter a b n)
 ; => {definition}
