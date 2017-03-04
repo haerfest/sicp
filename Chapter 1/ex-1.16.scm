@@ -3,9 +3,9 @@
 ; (iter a b n)
 ; => {definition}
 ; a * b^n
-; => {n even, arithmetic}
-; a * b^(2n/2)
 ; => {arithmetic}
+; a * b^(2n/2)
+; => {n even}
 ; a * (b^2)^(n/2)
 ; => {definition}
 ; (iter a (* b b) (/ n 2))
@@ -14,9 +14,9 @@
 ; (iter a b n)
 ; => {definition}
 ; a * b^n
-; => {n odd, arithmetic}
-; a * b^(1+n-1)
 ; => {arithmetic}
+; a * b^(1+n-1)
+; => {n odd}
 ; a * b^1 * b^(n-1)
 ; => {arithmetic}
 ; (a * b) * b^(n-1)
