@@ -1,0 +1,12 @@
+(define (fast-expt b n)
+  (define (even? x)
+    (= (remainder x 2) 0))
+  (define (fast-expt-iter a b n)
+    (cond ((= n 0) a)
+          ((even? n)  (fast-expt-iter a          ; a * b^n = a * (b^2)^(n/2)
+                                      (* b b)
+                                      (/ n 2)))
+          (else (fast-expt-iter (* a b)          ; a * b^n = (a * b) * b^(n-1)
+                                b
+                                (- n 1)))))
+  (fast-expt-iter 1 b n))
