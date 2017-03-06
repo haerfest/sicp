@@ -46,7 +46,7 @@
                     (remainder 40 (remainder 206 40)))
          (remainder (remainder 40 (remainder 206 40))
                     (remainder (remainder 206 40)
-                               (remainder 40 (remainder 206 40)))))))
+                               (remainder 40 (remainder 206 40))))))
 ; => {evaluate condition: 3+4=7}
 (if (= 0 2)
     (remainder 40 (remainder 206 40))
@@ -54,13 +54,13 @@
                     (remainder 40 (remainder 206 40)))
          (remainder (remainder 40 (remainder 206 40))
                     (remainder (remainder 206 40)
-                               (remainder 40 (remainder 206 40)))))))
+                               (remainder 40 (remainder 206 40))))))
 ; => {condition false}
 (gcd (remainder (remainder 206 40)
                 (remainder 40 (remainder 206 40)))
      (remainder (remainder 40 (remainder 206 40))
                 (remainder (remainder 206 40)
-                           (remainder 40 (remainder 206 40)))))))
+                           (remainder 40 (remainder 206 40)))))
 ; => {definition}
 (if (= 0 (remainder (remainder 40 (remainder 206 40))
                     (remainder (remainder 206 40)
