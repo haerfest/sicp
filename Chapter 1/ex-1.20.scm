@@ -4,7 +4,7 @@
       (gcd b (remainder a b))))
 
 ; In normal order the parameters to a function are not evaluated until their
-; values are needed.  It requires 11 calls to the remainder function.
+; values are needed.  It requires 18 calls to the remainder function.
 (gcd 206 40)
 ; => {definition}
 (if (= 0 40)
@@ -90,7 +90,7 @@
 ; => {condition true}
 (remainder (remainder 206 40)
            (remainder 40 (remainder 206 40)))
-; => {evalute expression: 7+4=11}
+; => {evalute expression: 14+4=18}
 2
 
 ; In applicative order the parameters to a function are evaluated before the
