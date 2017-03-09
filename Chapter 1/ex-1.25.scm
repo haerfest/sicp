@@ -1,9 +1,10 @@
-; The difference between both implementation is that expmod-1 applies the
-; remainder function at every step, limiting the number to be calculated with
-; to the [0..m) range.  the expmod-2 only applies the remainder operation all
-; the way at the end, meaning might have had to calculate with some very large
-; numbers.  Such numbers may perhaps not fit in 32-bit or 64-bit registers,
-; meaning it cannot do native multiplication and has to resort to library calls.
+; The difference between both implementations is that expmod-1 applies the
+; remainder function at every step, limiting the numbers to be calculated with
+; to the [0..m) range.  The expmod-2 only applies the remainder operation all
+; the way at the end, meaning it might have had to calculate with some very
+; large numbers.  Such numbers may perhaps not fit in the native register size,
+; meaning it cannot do native multiplication and has to resort to more expensive
+; library calls.
 ;
 ; The run time measurements seem to support this:
 ;
