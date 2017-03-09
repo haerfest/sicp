@@ -10,7 +10,7 @@
 ; > (timed-prime-test 1019)
 ; 1019 *** 32
 ;
-; So the base was 9 and is now slower, but that's not important.
+; So the base run time is 34.
 ;
 ; > (timed-prime-test 10007)
 ; 10007 *** 43

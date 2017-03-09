@@ -8,6 +8,8 @@
 ; 1013 *** 9
 ; 1019 *** 9
 ;
+; So the base run time is 9.
+;
 ; > (search-for-primes 10000)  ; 
 ; 10007 *** 29
 ; 10009 *** 29
