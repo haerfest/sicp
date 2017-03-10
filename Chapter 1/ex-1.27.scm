@@ -1,15 +1,5 @@
-; > (congruent? 561)
-; #t
-; > (congruent? 1105)
-; #t
-; > (congruent? 1729)
-; #t
-; > (congruent? 2465)
-; #t
-; > (congruent? 2821)
-; #t
-; > (congruent? 6601)
-; #t
+; > (map congruent? '(561 1105 1729 2465 2821 6601))
+; (#t #t #t #t #t #t)
 
 (define (congruent? n)
   (define (try-it a)
