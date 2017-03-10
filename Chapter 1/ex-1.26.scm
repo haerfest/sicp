@@ -1,4 +1,4 @@
-; With applicate order evaluation, a function's arguments are evaluated first,
+; With applicative order evaluation, a function's arguments are evaluated first,
 ; prior to calling the function.  This means that in (square x), the argument x
 ; is evaluated once, and in (* x x), the argument x is evaluated twice.
 ;
