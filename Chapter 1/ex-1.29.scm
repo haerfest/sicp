@@ -7,11 +7,12 @@
             (else 4)))
     (define (y k)
       (f (+ a (* k h))))
-    (define (sum k acc)
+    (define (sum k)
       (if (> k n)
-          (* h 1/3 acc)
-          (sum (+ k 1) (+ acc (* (multiplier k) (y k))))))
-    (sum 0 0)))
+          0
+          (+ (* (multiplier k) (y k))
+             (sum (+ k 1)))))
+    (* h 1/3 (sum 0))))
 
 (define (even? x)
   (= (remainder x 2) 0))
