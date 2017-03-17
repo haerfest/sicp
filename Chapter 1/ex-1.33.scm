@@ -19,10 +19,11 @@
 (define (inc x) (+ x 1))
 
 (define (prime? n)
-  (fast-prime? n 3))
+  (fast-prime? n 5))
 
 (define (fast-prime? n times)
-  (cond ((= times 0) true)
+  (cond ((= n 1) true)  ; calling (fermat-test 1) will fail
+        ((= times 0) true)
         ((fermat-test n) (fast-prime? n (- times 1)))
         (else false)))
 
