@@ -2,7 +2,7 @@
   (define (recur i)
     (if (> i k)
         0
-        (/ (n k) (+ (d k)
+        (/ (n i) (+ (d i)
                     (recur (+ i 1))))))
   (recur 1))
 
@@ -27,5 +27,5 @@
     (if (= i 0)
         acc
         (iter (- i 1)
-              (/ (n k) (+ (d k) acc)))))
+              (/ (n i) (+ (d i) acc)))))
   (iter k 0))
