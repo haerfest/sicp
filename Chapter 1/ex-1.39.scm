@@ -1,0 +1,11 @@
+(define (tan-cf x k)
+  (define (factor i)
+    (+ 1 (* (- i 1) 2)))  ; 1 3 5 7 9 ...
+  (let ((xx (* x x)))
+    (define (iter i acc)
+      (if (= i 0)
+          (/ x acc)
+          (iter (- i 1)
+                (- (factor i)
+                   (/ xx acc)))))
+    (iter k 1)))
