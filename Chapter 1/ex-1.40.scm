@@ -36,8 +36,12 @@
     (/ (- (g (+ x dx)) (g x))
        dx)))
 
-; Calculate x^3 = 0  =>  x = 0.
+; x^3 = 0
+; => {math}
+; x = 0
 (newtons-method (cubic 0 0 0) 1)  ; => 2.6531990291797187e-05
 
-; Calculate x^3 + x^2 + x - 14  =>  x = 2.
+; x^3 + x^2 + x - 14 = 0
+; => {math}
+; x = 2
 (newtons-method (cubic 1 1 -14) 1)  ; => 2.0000000000000133
