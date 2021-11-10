@@ -1,6 +1,8 @@
 (load "../Chapter 1/ex-1.33.scm")       ; prime?
 (load "ex-2.33.scm")                    ; accumulate
 
+(define nil '())
+
 (define (flatmap proc seq)
   (accumulate append nil (map proc seq)))
 
