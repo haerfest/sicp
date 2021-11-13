@@ -1,18 +1,15 @@
 (load "../Chapter 1/ex-1.33.scm")       ; prime?
 (load "ex-2.33.scm")                    ; accumulate
 
-(define nil '())
-
 (define (flatmap proc seq)
   (accumulate append nil (map proc seq)))
 
 (define (filter pred items)
-  (define (iter items result)
-    (cond ((null? items) result)
-          ((pred (car items)) (iter (cdr items)
-                                    (cons (car items) result)))
-          (else (iter (cdr items) result))))
-  (iter items '()))
+  (define (iter items)
+    (cond ((null? items) nil)
+          ((pred (car items)) (cons (car items) (iter (cdr items))))
+          (else (iter (cdr items)))))
+  (iter items))
 
 (define (enumerate-interval i j)
   (if (> i j)
